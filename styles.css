@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(rgba(164, 232, 164, 0.712),rgb(225, 246, 221),rgba(164, 232, 164, 0.712));
+    background-attachment: fixed;
+}
+
+.nav {
+    background-color: rgb(55, 110, 55);
+    border: 2px solid #12421d;
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block; 
+    padding: 10px;
+    color: white;
+}
+
+.homeImage {
+    width: 100%;
+    max-height: 20em;
+    display: block;
+}
+
+.homeContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.homePageSidebar {
+    width: 50%;
+    max-height: 20em;
+}
+
+.homePageText {
+    width: 50%;
+}
