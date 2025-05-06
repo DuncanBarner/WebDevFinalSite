@@ -144,3 +144,137 @@ body {
     margin-left: 5px;
 }
 
+.whatCanWeDoContent {
+    display: flex;
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+.whatCanWeDoContent img {
+    max-height: 60em;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.whatCanWeDoBottomText {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the iframe horizontally */
+    gap: 1em; /* Optional: adds space between paragraph and video */
+}
+
+.whatCanWeDoBottomText iframe {
+    width: 50%;
+    height: 20em;
+    border: none;
+}
+
+.otherResources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .otherResourcesColumn img {
+    width: 100%;
+    height: 15em;
+    display: block;
+  }
+  
+  .otherResourcesColumn p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-top: 10px;
+  }
+  
+/* -------------------- TABLET VIEW (<= 900px) -------------------- */
+@media (max-width: 900px) {
+    .homeContent {
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.2em;
+    }
+  
+    .homePageText,
+    .homePageSidebar {
+      width: 100%;
+    }
+  
+    .homePageSidebar {
+      max-height: none;
+    }
+  
+    .nav li {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+  
+  /* -------------------- MOBILE VIEW (<= 600px) -------------------- */
+  @media (max-width: 600px) {
+    .nav {
+      font-size: 1em;
+    }
+  
+    .nav a {
+      padding: 8px;
+    }
+  
+    .homeImage {
+      max-height: 15em;
+    }
+  
+    .homeContent {
+      padding: 10px;
+      gap: 15px;
+    }
+  
+    .homePageText {
+      font-size: 1em;
+    }
+  }
+  
+
+  /* Tablet view (<= 900px) */
+@media (max-width: 900px) {
+    .whatIsBioContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .leftSideContent,
+    .whatIsBioContent iframe {
+      width: 100%;
+    }
+  
+    .leftSideContent p {
+      font-size: 1.1em;
+    }
+  
+    .leftSideContent img {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile view (<= 600px) */
+  @media (max-width: 600px) {
+    .whatIsBioContent {
+      padding: 10px;
+      gap: 15px;
+    }
+  
+    .leftSideContent p {
+      font-size: 1em;
+      line-height: 1.3em;
+    }
+  
+    .whatIsBioContent iframe {
+      height: 16em;
+    }
+  }
+  
