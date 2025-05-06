@@ -27,6 +27,7 @@ body {
     width: 100%;
     max-height: 20em;
     display: block;
+    margin-top: 5px;
 }
 
 .homeContent {
@@ -101,4 +102,45 @@ body {
     line-height: 1.4em;
 }
 
+.deforestation {
+    margin-top: 5px;
+    max-height: 28em;
+    width: 100%;
+}
+
+.humanImpactContent1 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+.humanImpactContent2 {
+    display: flex;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    width: 100%;
+    max-height: 60em;
+}
+
+.humanImpactContent3 {
+    display: flex;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    width: 100%;
+    max-height: 60em;
+}
+
+.oilmachines {
+    display: flex;
+    width: 50%;
+    max-height: 60em;
+    margin-left: 5px;
+}
+
+.garbage {
+    display: flex;
+    width: 50%;
+    max-height: 60em;
+    margin-top: 10px;
+    margin-left: 5px;
+}
 
