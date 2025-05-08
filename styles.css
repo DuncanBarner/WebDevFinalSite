@@ -1,280 +1,248 @@
-body {
-    background: linear-gradient(rgba(164, 232, 164, 0.712),rgb(225, 246, 221),rgba(164, 232, 164, 0.712));
-    background-attachment: fixed;
-}
-
-.nav {
-    background-color: rgb(55, 110, 55);
-    border: 2px solid #12421d;
-    border-width: 1px 0;
-    list-style: none;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Body and Basic Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 1rem;
+    background: #33ab35;
+    color: #fff;
+}
+
+header img {
+    width: 30px; 
+    height: auto;
+    margin-right: 1rem; 
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Navigation */
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #0b4e26;
+    margin: 0;
+    padding: 10px 0;
 }
 
 .nav li {
-    display: inline;
+    margin: 0 15px;
 }
 
 .nav a {
-    display: inline-block; 
-    padding: 10px;
+    text-decoration: none;
     color: white;
+    font-size: 1.1rem;
 }
 
-.homeImage {
+/* Layout for Biodiversity Page */
+.grid-biodiversity {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.imageContainer {
     width: 100%;
-    max-height: 20em;
     display: block;
-    margin-top: 5px;
 }
 
-.homeContent {
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.leftText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.rightImage {
     display: flex;
-    align-items: flex-start;
-    gap: 20px; 
-    padding: 20px;
-    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
 }
 
-.homePageSidebar {
-    width: 50%;
-    max-height: 20em;
+.rightImage img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
 }
 
-.homePageText {
-    width: 50%;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Tablet view */
+    .grid-biodiversity {
+        grid-template-columns: 1fr;
+    }
+
+    .contentContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .rightImage img {
+        width: 80%;
+    }
 }
 
+@media (max-width: 768px) {
+    /* Mobile view */
+    .grid-biodiversity {
+        grid-template-columns: 1fr;
+    }
 
-.whatIsBioContent {
-    display: flex;
-    align-items: stretch;
+    .contentContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .rightImage img {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2rem; 
+    }
+
+    .nav {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .whatCanWeDoLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .otherResources {
+        grid-template-columns: 1fr; 
+    }
+
+    .otherResourcesColumn img {
+        max-width: 150px; 
+    }
+}
+
+/* Container for the image */
+.imageContainer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container for the text and video layout */
+.contentSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Left side: Text styling */
+.leftText {
+    padding-right: 20px; 
+}
+
+/* Right side: Video iframe styling */
+.rightVideo iframe {
+    width: 100%;
+    height: 315px;
+}
+
+/* Layout for the content: text on the left, image on the right */
+.whatCanWeDoLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 20px;
 }
 
-.leftSideContent {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.leftText {
+    padding: 10px;
+    font-size: 1.1rem;
 }
 
-
-.leftSideContent p {
-    font-size: 1.25em;
-    margin: 0;
-    line-height: 1.4em;
-}
-
-.whatIsBioContent iframe {
-    width: 50%;
-    border: none;
-    aspect-ratio: 4/3;
-}
-
-.leftSideContent img {
+.rightImage img {
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
     display: block;
+    max-width: 600px;
 }
 
-.beeImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 90%;
-    height: 20em;
-    
-}
-
-.whyBioMattersContent {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 90%;
-    font-size: 1.4em;
-    line-height: 1.4em;
-}
-
-.deforestation {
-    margin-top: 5px;
-    max-height: 28em;
-    width: 100%;
-}
-
-.humanImpactContent1 {
-    font-size: 1.4em;
-    line-height: 1.4em;
-}
-
-.humanImpactContent2 {
-    display: flex;
-    font-size: 1.4em;
-    line-height: 1.4em;
-    width: 100%;
-    max-height: 60em;
-}
-
-.humanImpactContent3 {
-    display: flex;
-    font-size: 1.4em;
-    line-height: 1.4em;
-    width: 100%;
-    max-height: 60em;
-}
-
-.oilmachines {
-    display: flex;
-    width: 50%;
-    max-height: 60em;
-    margin-left: 5px;
-}
-
-.garbage {
-    display: flex;
-    width: 50%;
-    max-height: 60em;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.whatCanWeDoContent {
-    display: flex;
-    font-size: 1.4em;
-    line-height: 1.4em;
-}
-
-.whatCanWeDoContent img {
-    max-height: 60em;
-    width: 50%;
-    margin-top: 10px;
-}
-
+/* Bottom section with video and text */
 .whatCanWeDoBottomText {
-    font-size: 1.4em;
-    line-height: 1.4em;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* This centers the iframe horizontally */
-    gap: 1em; /* Optional: adds space between paragraph and video */
+    padding: 20px;
+    font-size: 1.1rem;
 }
 
 .whatCanWeDoBottomText iframe {
-    width: 50%;
-    height: 20em;
-    border: none;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
 }
 
+/* Overall container for the resources */
 .otherResources {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .otherResourcesColumn img {
-    width: 100%;
-    height: 15em;
-    display: block;
-  }
-  
-  .otherResourcesColumn p {
-    font-size: 1.1em;
-    line-height: 1.5em;
-    margin-top: 10px;
-  }
-  
-/* -------------------- TABLET VIEW (<= 900px) -------------------- */
-@media (max-width: 900px) {
-    .homeContent {
-      flex-direction: column;
-      align-items: center;
-      font-size: 1.2em;
-    }
-  
-    .homePageText,
-    .homePageSidebar {
-      width: 100%;
-    }
-  
-    .homePageSidebar {
-      max-height: none;
-    }
-  
-    .nav li {
-      display: block;
-      margin: 5px 0;
-    }
-  }
-  
-  /* -------------------- MOBILE VIEW (<= 600px) -------------------- */
-  @media (max-width: 600px) {
-    .nav {
-      font-size: 1em;
-    }
-  
-    .nav a {
-      padding: 8px;
-    }
-  
-    .homeImage {
-      max-height: 15em;
-    }
-  
-    .homeContent {
-      padding: 10px;
-      gap: 15px;
-    }
-  
-    .homePageText {
-      font-size: 1em;
-    }
-  }
-  
+}
 
-  /* Tablet view (<= 900px) */
-@media (max-width: 900px) {
-    .whatIsBioContent {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .leftSideContent,
-    .whatIsBioContent iframe {
-      width: 100%;
-    }
-  
-    .leftSideContent p {
-      font-size: 1.1em;
-    }
-  
-    .leftSideContent img {
-      width: 100%;
-    }
-  }
-  
-  /* Mobile view (<= 600px) */
-  @media (max-width: 600px) {
-    .whatIsBioContent {
-      padding: 10px;
-      gap: 15px;
-    }
-  
-    .leftSideContent p {
-      font-size: 1em;
-      line-height: 1.3em;
-    }
-  
-    .whatIsBioContent iframe {
-      height: 16em;
-    }
-  }
-  
+/* Style for each column */
+.otherResourcesColumn {
+    text-align: center;
+    padding: 20px;
+}
+
+.otherResourcesColumn img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; 
+    margin-bottom: 15px; 
+}
+
+.otherResourcesColumn p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2em;
+}
