@@ -225,3 +225,15 @@ footer {
         grid-template-columns: repeat(3, 1fr); 
     }
 }
+
+.videoWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.videoWrapper iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+}
